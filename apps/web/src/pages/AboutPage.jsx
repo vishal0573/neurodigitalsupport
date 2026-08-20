@@ -5,10 +5,13 @@ import {
   ArrowRight,
   Brain,
   BriefcaseBusiness,
-  Building2,
+  Bot,
+  ChartNoAxesCombined,
   CircleCheck,
   ClipboardCheck,
+  Code2,
   GraduationCap,
+  Handshake,
   Layers,
   Landmark,
   Lock,
@@ -157,7 +160,7 @@ const AboutPage = () => (
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#f8fffb] py-24 dark:bg-background sm:py-28">
+      <section className="relative overflow-hidden bg-[#f8fffb] pb-8 pt-24 dark:bg-background sm:pb-10 sm:pt-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(196,235,222,0.32),transparent_34%),linear-gradient(135deg,#fbfffd_0%,#f6fcf9_48%,#eef8f4_100%)] dark:bg-none" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-[1220px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <article className="max-w-[620px]">
@@ -251,7 +254,82 @@ const AboutPage = () => (
         </div>
       </section>
 
-      <section className="bg-white py-20 sm:py-24">
+      <section className="relative overflow-hidden bg-[#f8fffb] pb-8 pt-8 dark:bg-background sm:pb-10 sm:pt-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_14%,rgba(196,235,222,0.32),transparent_34%),linear-gradient(225deg,#fbfffd_0%,#f6fcf9_48%,#eef8f4_100%)] dark:bg-none" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-[1220px] items-center gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+          <article className="max-w-[620px]">
+            <div className="inline-flex items-center gap-3 rounded-full border border-[#cfe7de] bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#0f765a] shadow-[0_10px_28px_rgba(15,61,50,0.05)] backdrop-blur dark:border-border dark:bg-card dark:text-emerald-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#0f765a] dark:bg-emerald-300" aria-hidden="true" />
+              Co-Founder Story
+            </div>
+            <h2 className="mt-6 max-w-xl text-3xl font-semibold leading-[1.08] tracking-normal text-[#0c3028] sm:text-4xl lg:text-[3rem] dark:text-foreground">
+              Shubham Nagore
+            </h2>
+            <p className="mt-4 max-w-xl text-xl font-semibold leading-snug text-[#28745f] dark:text-emerald-300 sm:text-2xl">
+              Full-stack technologist, AI specialist, and market strategist.
+            </p>
+            <div className="mt-6 max-w-[34rem] space-y-4 text-base font-medium leading-8 text-[#405951] dark:text-muted-foreground sm:text-lg">
+              <p>Shubham is an AI specialist, full-stack technologist, and market strategist with deep expertise in agentic AI systems and modern product engineering. As a Co-Founder, he combines the technical depth required to architect complex systems with the commercial instincts needed to position and scale them.</p>
+              <p>Backed by an established network across London&apos;s business ecosystem, Shubham spearheads NeuroDigital Support&apos;s go-to-market strategy, technology partnerships, and brand positioning. He brings an extensive track record of delivering digital transformation across the hospitality and events sectors—from custom booking engines and venue management platforms to end-to-end digital experiences.</p>
+              <p>He also acts as an AI specialist and tutor, helping teams and leaders master emerging AI architectures.</p>
+            </div>
+
+            <div className="theme-surface mt-7 grid gap-5 rounded-2xl border border-[#d9eee6] bg-white/70 p-5 shadow-[0_18px_54px_rgba(15,61,50,0.055)] backdrop-blur-xl sm:grid-cols-[0.76fr_1fr] sm:p-6">
+              <div className="flex items-center gap-4">
+                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-white bg-[#123d32] shadow-[0_14px_34px_rgba(15,61,50,0.2)]">
+                  <img src="/images/products/shubham-nagore.jpeg?v=20260820" alt="Shubham Nagore" className="h-full w-full object-cover object-[center_20%]" />
+                </div>
+                <div>
+                  <p className="text-base font-semibold text-[#0c3028] dark:text-foreground">Shubham Nagore</p>
+                  <p className="text-sm font-medium text-[#28745f] dark:text-emerald-300">Co-Founder</p>
+                </div>
+              </div>
+              <p className="border-[#cfe7de] text-sm font-medium italic leading-6 text-[#314f47] dark:text-muted-foreground sm:border-l sm:pl-6">
+                Building intelligent systems and clear market strategies that create meaningful, lasting impact.
+              </p>
+            </div>
+          </article>
+
+          <div className="grid items-end gap-6 sm:grid-cols-2 lg:gap-7">
+            <div className="theme-surface rounded-2xl border border-[#cfe7de] bg-white/74 p-5 shadow-[0_24px_70px_rgba(15,61,50,0.08)] backdrop-blur-xl sm:p-6">
+              <h3 className="text-lg font-semibold text-[#0c3028] dark:text-foreground sm:text-xl">Strategic Focus</h3>
+              <div className="mt-4 h-0.5 w-14 rounded-full bg-[#0f765a]" />
+              <div className="mt-5">
+                {[
+                  { title: 'Agentic AI Systems', text: 'Architecting intelligent, practical AI workflows', icon: Bot },
+                  { title: 'Product Engineering', text: 'Building robust, end-to-end digital products', icon: Code2 },
+                  { title: 'Go-to-Market Strategy', text: 'Positioning products to reach and grow their market', icon: ChartNoAxesCombined },
+                  { title: 'Technology Partnerships', text: 'Creating valuable commercial and technical alliances', icon: Handshake }
+                ].map(({ title, text, icon: Icon }) => (
+                  <div key={title} className="flex gap-4 border-b border-[#d8e9e2] py-4 first:pt-0 last:border-b-0 last:pb-0">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e8f5ef] text-[#167158] sm:h-12 sm:w-12">
+                      <Icon className="h-5 w-5 stroke-[1.8]" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold leading-snug text-[#0c3028] dark:text-foreground sm:text-base">{title}</p>
+                      <p className="mt-1.5 text-sm font-medium leading-5 text-[#415b53] dark:text-muted-foreground">{text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <aside className="theme-surface rounded-2xl border border-[#cfe7de] bg-white/74 p-7 text-center shadow-[0_28px_80px_rgba(15,61,50,0.08)] backdrop-blur-xl">
+              <div className="mx-auto flex h-36 w-36 items-center justify-center rounded-full bg-[conic-gradient(from_0deg,#bde6d9_0_18%,#0f765a_18%_68%,#d5f0e7_68%_100%)] p-3 shadow-[inset_0_0_0_1px_rgba(15,118,90,0.08)] dark:bg-[conic-gradient(from_0deg,rgba(16,185,129,0.22)_0_18%,rgba(16,185,129,0.72)_18%_68%,rgba(45,212,191,0.18)_68%_100%)] sm:h-40 sm:w-40">
+                <div className="flex h-full w-full items-center justify-center rounded-full bg-[#fbfffd] px-5 dark:bg-card">
+                  <p className="text-center text-lg font-semibold leading-snug text-[#0c3028] dark:text-foreground sm:text-xl">Built to Scale</p>
+                </div>
+              </div>
+              <div className="mx-auto mt-6 h-0.5 w-16 rounded-full bg-[#0f765a]" />
+              <p className="mx-auto mt-6 max-w-[250px] text-sm font-medium leading-7 text-[#2f4841] dark:text-muted-foreground sm:text-base">
+                Turning complex technology into scalable products, strong partnerships, and trusted digital experiences.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white pb-20 pt-10 sm:pb-24 sm:pt-12">
         <div className="mx-auto max-w-[1120px] px-5 sm:px-8 lg:px-10">
           <div className="text-center">
             <SectionHeading>Our Principles</SectionHeading>

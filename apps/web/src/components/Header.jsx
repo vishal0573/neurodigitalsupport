@@ -127,7 +127,7 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="flex shrink-0 items-center" data-focus-distraction>
+          <div className="hidden shrink-0 items-center sm:flex" data-focus-distraction>
             <AccessibilityWidget />
           </div>
 
