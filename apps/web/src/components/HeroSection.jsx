@@ -73,7 +73,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-0 overflow-hidden transition-colors duration-300 sm:min-h-[calc(100svh-4rem)]"
+      className="relative min-h-[41rem] overflow-hidden transition-colors duration-300 sm:min-h-[calc(100svh-4rem)]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocus={() => setIsPaused(true)}
@@ -82,7 +82,7 @@ const HeroSection = () => {
       <AnimatePresence initial={false}>
         <motion.div
           key={currentSlide.image}
-          className="hero-slide-bg absolute inset-0 z-0 h-full w-full bg-no-repeat bg-center bg-cover sm:bg-center sm:bg-cover brightness-[0.84] grayscale-[8%] saturate-[0.9] contrast-[0.98]"
+          className="hero-slide-bg absolute inset-0 z-0 hidden h-full w-full bg-no-repeat bg-center bg-cover sm:block sm:bg-center sm:bg-cover sm:brightness-[0.84] sm:grayscale-[8%] sm:saturate-[0.9] sm:contrast-[0.98]"
           style={{
             backgroundImage: `url('${currentSlide.image}')`,
             "--hero-bg-position": currentSlide.imagePosition,
@@ -100,15 +100,21 @@ const HeroSection = () => {
         />
       </AnimatePresence>
 
-      <div
-        className="absolute inset-0 z-0"
-        style={{ backgroundColor: "rgba(35, 35, 35, 0.62)" }}
-        aria-hidden="true"
-      />
+      <div className="absolute inset-x-0 top-0 z-0 h-[22rem] overflow-hidden sm:hidden" aria-hidden="true">
+        <img
+          src={currentSlide.image}
+          alt=""
+          className="h-full w-full object-cover"
+          style={{ objectPosition: currentSlide.mobilePosition }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950/95" />
+      </div>
+
+      <div className="absolute inset-0 z-0 bg-transparent sm:bg-slate-950/62" aria-hidden="true" />
 
       {/* Subtle neutral grid for depth without green cast */}
       <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-10"
+        className="absolute inset-0 z-0 hidden pointer-events-none opacity-10 sm:block"
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
@@ -121,11 +127,11 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="relative z-10 container mx-auto flex min-h-0 items-start justify-center px-4 pb-8 pt-10 sm:min-h-[calc(100svh-4rem)] sm:items-center sm:px-6 sm:py-16 lg:px-8">
+      <div className="relative z-10 container mx-auto flex min-h-[41rem] items-end justify-center px-0 pb-0 pt-10 sm:min-h-[calc(100svh-4rem)] sm:items-center sm:px-6 sm:py-16 lg:px-8">
         <div className="flex w-full items-center justify-center">
           {/* LEFT — Text content */}
           <motion.div
-            className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center text-center sm:space-y-8"
+            className="mx-auto flex w-full max-w-none flex-col items-center justify-center bg-slate-950 px-5 py-4 text-center sm:max-w-4xl sm:bg-transparent sm:px-0 sm:py-0 sm:space-y-8"
             {...(reducedMotion
               ? {}
               : {
@@ -151,7 +157,7 @@ const HeroSection = () => {
                 >
                   {currentSlide.title ? (
                     <>
-                      <h1 className="mx-auto max-w-[19rem] text-center text-[1.7rem] font-extrabold leading-[1.08] tracking-tight text-white sm:max-w-4xl sm:text-4xl sm:leading-[1.15] lg:text-5xl">
+                      <h1 className="mx-auto max-w-[19rem] text-center text-[1.45rem] font-extrabold leading-[1.06] tracking-tight text-white sm:max-w-4xl sm:text-4xl sm:leading-[1.15] lg:text-5xl">
                         {currentSlide.title}
                       </h1>
 
@@ -174,7 +180,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons - Sized down to fit on one line */}
             <motion.div
-              className="mt-4 flex flex-col items-center justify-center gap-2 sm:mt-0 sm:flex-row sm:flex-wrap sm:gap-3 sm:pt-3 lg:pt-0"
+              className="mt-3 flex flex-col items-center justify-center gap-1.5 sm:mt-0 sm:flex-row sm:flex-wrap sm:gap-3 sm:pt-3 lg:pt-0"
               {...(reducedMotion
                 ? {}
                 : {
@@ -185,7 +191,7 @@ const HeroSection = () => {
             >
               <Button
                 size="sm"
-                className="inline-flex h-10 min-w-[14rem] items-center justify-center gap-1.5 rounded-full bg-[#34967C] px-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#2a7a65] hover:shadow-lg hover:shadow-emerald-900/35 active:scale-[0.98] sm:min-w-0 sm:px-5"
+                className="inline-flex h-9 min-w-[14rem] items-center justify-center gap-1.5 rounded-full bg-[#34967C] px-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#2a7a65] hover:shadow-lg hover:shadow-emerald-900/35 active:scale-[0.98] sm:h-10 sm:min-w-0 sm:px-5"
               >
                 Explore Our Ecosystem
                 <ArrowRight className="w-3.5 h-3.5 ml-0.5" aria-hidden="true" />
@@ -194,7 +200,7 @@ const HeroSection = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="inline-flex h-10 min-w-[12.5rem] items-center justify-center gap-1.5 rounded-full border-white/30 bg-white/10 px-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/18 hover:text-white active:scale-[0.98] sm:min-w-0 sm:px-5"
+                className="inline-flex h-9 min-w-[12.5rem] items-center justify-center gap-1.5 rounded-full border-white/30 bg-white/10 px-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/18 hover:text-white active:scale-[0.98] sm:h-10 sm:min-w-0 sm:px-5"
               >
                 <Download className="w-3.5 h-3.5 mr-0.5" aria-hidden="true" />
                 Download NuroTok
@@ -203,7 +209,7 @@ const HeroSection = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                className="inline-flex h-10 min-w-[12.5rem] items-center justify-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/18 hover:text-white active:scale-[0.98] sm:min-w-0 sm:px-5"
+                className="inline-flex h-9 min-w-[12.5rem] items-center justify-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/18 hover:text-white active:scale-[0.98] sm:h-10 sm:min-w-0 sm:px-5"
               >
                 <Calendar className="w-3.5 h-3.5 mr-0.5" aria-hidden="true" />
                 Book a Demo
@@ -211,7 +217,7 @@ const HeroSection = () => {
             </motion.div>
 
             <div
-              className="mt-4 flex items-center justify-center gap-2 sm:mt-0 sm:pt-1"
+              className="mt-3 flex items-center justify-center gap-2 sm:mt-0 sm:pt-1"
               aria-label="Hero slides"
               data-focus-distraction
             >
@@ -233,7 +239,7 @@ const HeroSection = () => {
 
             {/* Trust strip */}
             <motion.div
-              className="mt-4 flex max-w-[19rem] flex-wrap items-center justify-center gap-x-3 gap-y-1.5 border-t border-white/20 pt-4 sm:mt-0 sm:max-w-none sm:gap-x-5 sm:gap-y-2 sm:pt-6"
+              className="mt-3 flex max-w-[19rem] flex-wrap items-center justify-center gap-x-3 gap-y-1.5 border-t border-white/20 pt-3 sm:mt-0 sm:max-w-none sm:gap-x-5 sm:gap-y-2 sm:pt-6"
               data-focus-distraction
               {...(reducedMotion
                 ? {}

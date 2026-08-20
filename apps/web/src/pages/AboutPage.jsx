@@ -276,8 +276,8 @@ const AboutPage = () => (
 
             <div className="theme-surface mt-7 grid gap-5 rounded-2xl border border-[#d9eee6] bg-white/70 p-5 shadow-[0_18px_54px_rgba(15,61,50,0.055)] backdrop-blur-xl sm:grid-cols-[0.76fr_1fr] sm:p-6">
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-white bg-[#123d32] shadow-[0_14px_34px_rgba(15,61,50,0.2)]">
-                  <img src="/images/products/shubham-nagore.jpeg?v=20260820" alt="Shubham Nagore" className="h-full w-full object-cover object-[center_20%]" />
+                <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-white bg-[#123d32] shadow-[0_14px_34px_rgba(15,61,50,0.2)]">
+                  <img src="/images/products/shubham-nagore.jpeg?v=20260820" alt="Shubham Nagore" className="h-full w-full object-cover object-top" />
                 </div>
                 <div>
                   <p className="text-base font-semibold text-[#0c3028] dark:text-foreground">Shubham Nagore</p>
