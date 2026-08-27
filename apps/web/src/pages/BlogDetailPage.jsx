@@ -174,6 +174,7 @@ const BlogDetailPage = () => {
   const pageTitle = post ? (post.metaTitle || `${post.title} | NeuroDigital Support Blog`) : 'NeuroDigital Support Blog';
   const pageDescription = post ? (post.metaDescription || post.excerpt || '') : '';
   const pageKeywords = post ? [post.targetKeyword, post.secondaryKeywords].filter(Boolean).join(', ') : '';
+  const socialImage = post?.image || canonicalFor('/logo.png');
 
   return (
     <>
@@ -182,6 +183,14 @@ const BlogDetailPage = () => {
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={pageKeywords} />
         <link rel="canonical" href={canonicalFor(`/blogs/${slug}`)} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={canonicalFor(`/blogs/${slug}`)} />
+        <meta property="og:image" content={socialImage} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={socialImage} />
       </Helmet>
 
       <Header />

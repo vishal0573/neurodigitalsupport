@@ -180,7 +180,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons - Sized down to fit on one line */}
             <motion.div
-              className="mt-3 flex flex-col items-center justify-center gap-1.5 sm:mt-0 sm:flex-row sm:flex-wrap sm:gap-3 sm:pt-3 lg:pt-0"
+              className="hidden"
               {...(reducedMotion
                 ? {}
                 : {

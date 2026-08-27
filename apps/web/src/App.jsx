@@ -18,11 +18,13 @@ import OliTokPage from './pages/OliTokPage.jsx';
 import ResearchInsightsHubPage from './pages/ResearchInsightsHubPage.jsx';
 import SocialListeningDashboardPage from './pages/SocialListeningDashboardPage.jsx';
 import ThankYouPage from './pages/ThankYouPage.jsx';
+import SeoFoundation from './components/SeoFoundation.jsx';
 
 function App() {
   return (
     <AccessibilityProvider>
       <Router>
+        <SeoFoundation />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />

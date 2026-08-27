@@ -268,11 +268,9 @@ const AboutPage = () => (
             <p className="mt-4 max-w-xl text-xl font-semibold leading-snug text-[#28745f] dark:text-emerald-300 sm:text-2xl">
               Full-stack technologist, AI specialist, and market strategist.
             </p>
-            <div className="mt-6 max-w-[34rem] space-y-4 text-base font-medium leading-8 text-[#405951] dark:text-muted-foreground sm:text-lg">
-              <p>Shubham is an AI specialist, full-stack technologist, and market strategist with deep expertise in agentic AI systems and modern product engineering. As a Co-Founder, he combines the technical depth required to architect complex systems with the commercial instincts needed to position and scale them.</p>
-              <p>Backed by an established network across London&apos;s business ecosystem, Shubham spearheads NeuroDigital Support&apos;s go-to-market strategy, technology partnerships, and brand positioning. He brings an extensive track record of delivering digital transformation across the hospitality and events sectors—from custom booking engines and venue management platforms to end-to-end digital experiences.</p>
-              <p>He also acts as an AI specialist and tutor, helping teams and leaders master emerging AI architectures.</p>
-            </div>
+            <p className="mt-6 max-w-[34rem] text-base font-medium leading-8 text-[#405951] dark:text-muted-foreground sm:text-lg">
+              Shubham is an AI specialist, full-stack technologist, and market strategist who co-founded NeuroDigital Support. He leads our go-to-market strategy, technology partnerships, and brand positioning, drawing on deep expertise in agentic AI, product engineering, and digital transformation across the hospitality and events sectors. He empowers teams and leaders to navigate emerging AI architectures, transform complex concepts into practical strategies, and drive the adoption of scalable, AI-powered solutions.
+            </p>
 
             <div className="theme-surface mt-7 grid gap-5 rounded-2xl border border-[#d9eee6] bg-white/70 p-5 shadow-[0_18px_54px_rgba(15,61,50,0.055)] backdrop-blur-xl sm:grid-cols-[0.76fr_1fr] sm:p-6">
               <div className="flex items-center gap-4">
