@@ -23,6 +23,7 @@ const EXTRACTION_REGEX = {
 	element: /element=\{<(\w+)[^}]*\/?\s*>\}/,
 	helmet: /<Helmet[^>]*?>([\s\S]*?)<\/Helmet>/i,
 	helmetTest: /<Helmet[\s\S]*?<\/Helmet>/i,
+	noindex: /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex[^"']*["']/i,
 	title: /<title[^>]*?>\s*(.*?)\s*<\/title>/i,
 	description: /<meta\s+name=["']description["']\s+content=["'](.*?)["']/i
 };
@@ -96,6 +97,8 @@ function extractHelmetData(content, filePath, routes) {
 	if (!helmetMatch) return null;
 
 	const helmetContent = helmetMatch[1];
+	if (EXTRACTION_REGEX.noindex.test(helmetContent)) return null;
+
 	const titleMatch = helmetContent.match(EXTRACTION_REGEX.title);
 	const descMatch = helmetContent.match(EXTRACTION_REGEX.description);
 

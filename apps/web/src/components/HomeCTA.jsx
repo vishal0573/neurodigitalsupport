@@ -271,14 +271,20 @@ const HomeCTA = () => {
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
               <p className="text-sm font-semibold text-slate-600 dark:text-muted-foreground">© 2026 NeuroDigital Support. All rights reserved.</p>
               <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-slate-600 dark:text-muted-foreground">
+                <button type="button" onClick={() => window.dispatchEvent(new Event('open-cookie-settings'))} className="transition-colors duration-200 hover:text-[#4a957e] focus-visible-ring rounded dark:hover:text-foreground">
+                  Cookie settings
+                </button>
                 <Link to="/accessibility" className="transition-colors duration-200 hover:text-[#4a957e] focus-visible-ring rounded dark:hover:text-foreground">
                   Accessibility Statement
                 </Link>
-                <Link to="/privacy" className="transition-colors duration-200 hover:text-[#4a957e] focus-visible-ring rounded dark:hover:text-foreground">
+                <Link to="/nurotok/privacy" className="transition-colors duration-200 hover:text-[#4a957e] focus-visible-ring rounded dark:hover:text-foreground">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="transition-colors duration-200 hover:text-[#4a957e] focus-visible-ring rounded dark:hover:text-foreground">
+                <Link to="/nurotok/terms" className="transition-colors duration-200 hover:text-[#4a957e] focus-visible-ring rounded dark:hover:text-foreground">
                   Terms of Service
+                </Link>
+                <Link to="/nurotok/cookies" className="transition-colors duration-200 hover:text-[#4a957e] focus-visible-ring rounded dark:hover:text-foreground">
+                  Cookie policy
                 </Link>
               </div>
             </div>

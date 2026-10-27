@@ -17,8 +17,8 @@ export default [
 		settings: {
 			react: { version: 'detect' },
 			'import/resolver': {
-				node: { extensions: ['.js', '.jsx'] },
-				alias: { map: [['@', './src']], extensions: ['.js', '.jsx'] },
+				node: { extensions: ['.js', '.jsx', '.md'] },
+				alias: { map: [['@', './src']], extensions: ['.js', '.jsx', '.md'] },
 			},
 		},
 		rules: {
@@ -44,6 +44,7 @@ export default [
 
 			// Override recommended import rules for stricter checking
 			'import/no-self-import': 'error', // Extremely fast rule, breaking results in infinite loop/bundling error
+			'import/no-unresolved': ['error', { ignore: ['\\.md\\?raw$'] }],
 
 			// Disable expensive rules for performance
 			'import/no-cycle': 'off', // AI rarely makes this error, and the rule is very slow to run

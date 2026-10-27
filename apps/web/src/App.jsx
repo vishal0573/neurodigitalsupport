@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
+import CookieConsent from '@/components/CookieConsent.jsx';
 import { AccessibilityProvider } from '@/contexts/AccessibilityContext.jsx';
 import ScrollToTop from './components/ScrollToTop';
 import AboutPage from './pages/AboutPage.jsx';
@@ -14,6 +15,7 @@ import DigitalAdvocacyHubPage from './pages/DigitalAdvocacyHubPage.jsx';
 import FeaturesPage from './pages/FeaturesPage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import NuroTokPage from './pages/NuroTokPage.jsx';
+import NuroTokLegalPage from './pages/NuroTokLegalPage.jsx';
 import OliTokPage from './pages/OliTokPage.jsx';
 import ResearchInsightsHubPage from './pages/ResearchInsightsHubPage.jsx';
 import SocialListeningDashboardPage from './pages/SocialListeningDashboardPage.jsx';
@@ -35,6 +37,8 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/nurotok" element={<NuroTokPage />} />
+          <Route path="/nurotok/legal" element={<NuroTokLegalPage />} />
+          <Route path="/nurotok/:policy" element={<NuroTokLegalPage />} />
           <Route path="/altitok" element={<AltiTokPage />} />
           <Route path="/olitok" element={<OliTokPage />} />
           <Route path="/care-logging" element={<CareLoggingPage />} />
@@ -44,6 +48,7 @@ function App() {
           <Route path="/social-listening-dashboard" element={<SocialListeningDashboardPage />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
         </Routes>
+        <CookieConsent />
         <Toaster />
       </Router>
     </AccessibilityProvider>

@@ -1,6 +1,5 @@
 ## Pages
 - [About NeuroDigital Support | Inclusive digital well-being](/about): Learn how NeuroDigital Support designs research-driven digital products that prioritise neurodivergent wellbeing, accessibility, and inclusive support.
-- [Admin Dashboard | NeuroDigital Support](/admin): No description available
 - [Care Logging | NeuroDigital Support](/carelogging): Care Logging lets care homes and supported living teams securely record daily routines, incidents, mood and sensory observations, and generate exportable reports for reviews and audits.
 - [Contact NeuroDigital Support | Demo, partnership, support](/contact): Contact NeuroDigital Support for demos, partnerships, accessibility advice, research enquiries, or support for autistic and neurodivergent adults.
 - [Digital Advocacy Hub | NeuroDigital Support](/digitaladvocacyhub): The Digital Advocacy Hub brings together campaigns, educational resources, and practical tools that support neurodiversity awareness and accessible societal change.

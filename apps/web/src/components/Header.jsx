@@ -48,7 +48,7 @@ const Header = () => {
 
   const isActive = (path) =>
     path === "/features"
-      ? featurePaths.includes(location.pathname)
+      ? featurePaths.includes(location.pathname) || location.pathname.startsWith("/nurotok/")
       : location.pathname === path;
 
   return (

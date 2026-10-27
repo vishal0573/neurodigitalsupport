@@ -15,6 +15,15 @@ const pageNames = {
   '/contact': 'Contact',
   '/features': 'Features',
   '/nurotok': 'NuroTok',
+  '/nurotok/legal': 'NuroTok Policies & Support',
+  '/nurotok/privacy': 'NuroTok Privacy Policy',
+  '/nurotok/terms': 'NuroTok Terms and Conditions',
+  '/nurotok/delete-account': 'NuroTok Account and Data Deletion',
+  '/nurotok/subscriptions': 'NuroTok Subscriptions, Cancellation and Refunds',
+  '/nurotok/wellbeing-disclaimer': 'NuroTok Wellbeing and AI Disclaimer',
+  '/nurotok/permissions': 'NuroTok App Permissions and Device Data',
+  '/nurotok/support': 'NuroTok Support and Contact',
+  '/nurotok/cookies': 'NuroTok Cookies and Third-Party Websites',
   '/altitok': 'AltiTok',
   '/olitok': 'OliTok',
   '/care-logging': 'Care Logging',
@@ -46,6 +55,42 @@ const pageMetadata = {
   '/nurotok': {
     title: 'NuroTok | Sensory regulation app for neurodivergent adults',
     description: 'NuroTok is a calming digital companion supporting sensory regulation, emotional wellbeing, and stress reduction.'
+  },
+  '/nurotok/legal': {
+    title: 'NuroTok Policies and Support | NeuroDigital Support',
+    description: 'Find NuroTok privacy, terms, deletion, subscriptions, wellbeing, permissions, support, and cookies information.'
+  },
+  '/nurotok/privacy': {
+    title: 'NuroTok Privacy Policy | NeuroDigital Support',
+    description: 'Information about NuroTok data practices, privacy choices, and data rights.'
+  },
+  '/nurotok/terms': {
+    title: 'NuroTok Terms and Conditions | NeuroDigital Support',
+    description: 'Terms and conditions for NuroTok features, wellbeing tools, and subscriptions.'
+  },
+  '/nurotok/delete-account': {
+    title: 'NuroTok Account and Data Deletion | NeuroDigital Support',
+    description: 'How to request NuroTok account deletion and remove local app data.'
+  },
+  '/nurotok/subscriptions': {
+    title: 'NuroTok Subscription Policy | NeuroDigital Support',
+    description: 'NuroTok subscription billing, cancellation, refunds, and purchase restoration.'
+  },
+  '/nurotok/wellbeing-disclaimer': {
+    title: 'NuroTok Wellbeing and AI Disclaimer | NeuroDigital Support',
+    description: 'Important limits on NuroTok wellbeing tools, AI conversations, and filtering.'
+  },
+  '/nurotok/permissions': {
+    title: 'NuroTok App Permissions | NeuroDigital Support',
+    description: 'Information about app permissions and their use in NuroTok.'
+  },
+  '/nurotok/support': {
+    title: 'NuroTok Support and Contact | NeuroDigital Support',
+    description: 'Contact information and guidance for NuroTok support requests.'
+  },
+  '/nurotok/cookies': {
+    title: 'NuroTok Cookies and Third-Party Websites | NeuroDigital Support',
+    description: 'Information about cookies and third-party websites used with NuroTok.'
   },
   '/altitok': {
     title: 'AltiTok | NeuroDigital Support',
